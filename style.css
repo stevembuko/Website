@@ -1,0 +1,115 @@
+:root {
+    --bg-color: #fafff1;
+    --bg-outline-color: #93b18d;
+    --fg-color: #ffffff;
+    --fg-outline-color: #008000;
+    --header-color: #ccffcc;
+}
+
+body {
+    min-height: 100%;
+    background: linear-gradient(to top, #c9f4ce, #f8f9fd);
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: var(--header-color);
+    outline-color: var(--fg-outline-color);
+    outline-width: 2px;
+    outline-style: solid;
+}
+
+.navbar a {
+    float: left;
+    color: inherit;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    text-align: center;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #e8ffe8;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.main {
+    margin: 0px auto 0px;
+    box-shadow: 1px 1px 2px #DAD7D7;
+    width: 1200px;
+    background: var(--bg-color);
+    outline-color: var(--bg-outline-color);
+    outline-width: 2px;
+    outline-style: solid;
+    padding-bottom: 1px;
+}
+
+.container {
+    padding: 0px;
+    margin: 32px;
+}
+
+.header {
+    background: var(--header-color);
+    outline-color: var(--fg-outline-color);
+    outline-width: 2px;
+    outline-style: solid;
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+}
+
+.section {
+    background: var(--fg-color);
+    outline-color: var(--fg-outline-color);
+    outline-width: 2px;
+    outline-style: solid;
+    margin: 0px;
+    padding: 16px;
+}

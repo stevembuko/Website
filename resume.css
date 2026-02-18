@@ -1,0 +1,177 @@
+:root {
+  --color: #00A000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;  
+  background: #eee;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  font-size: 16px;
+  line-height: 26px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.container {
+  width: 850px;
+  height: 1100px;
+  background: #fff;
+  margin: 0px auto 0px; 
+  /*box-shadow: 1px 1px 2px #DAD7D7*/;
+  border-radius: 3px;  
+  padding: 20px;
+}
+
+
+ul {
+  list-style-position: outside;
+  padding-left: 14px;
+  list-style-type: disc;
+}
+ul.outer-list
+{
+  list-style-position: outside;
+}
+h2 {
+  color: var(--color);
+  margin-bottom: 12px;
+}
+hr {
+  border: 1px solid var(--color);
+}
+
+
+.header {
+  height: 70px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  .banner {
+    width: 400px;
+    height: 70px;
+    background: var(--color);
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -20px;
+    padding-left: 20px;
+    border-radius: 0px 35px 35px 0px;
+
+    .banner-contents {
+      vertical-align: bottom;
+
+      .name {
+        font-size: 35px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .position {
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+  }
+  
+  .contact {
+    width: 220px;
+    color: var(--color);
+    
+    .email, .phone {
+      font-size: 20px;
+      font-weight: 400;
+      text-align: right;
+    }
+  }
+}
+
+.contents {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  .left-column {
+    width: 250px;
+    padding-right: 20px;
+    border-right: 2px solid var(--color);
+
+
+    .school {
+      font-weight: 700;
+    }
+  }
+
+  .split {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .right-column {
+    width: 540px;
+
+    .project {
+
+      .project-role {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .project-date {
+        font-weight: 700;
+      }
+      .project-name {
+        font-style: italic;
+        color: var(--color)
+      }
+      .project-type {
+        color: var(--color)
+      }
+
+      ul.project-details {
+        list-style-position: outside;
+        padding-left: 14px;
+      }
+    }
+
+    .job {
+
+      .job-left {
+        width: 320px;
+      }
+      .job-right {
+        width: 200px;
+        text-align: right;
+      }
+
+      .employment-role {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .employment-date {
+        font-weight: 700;
+      }
+      .employment-company {
+        font-style: italic;
+        color: var(--color)
+      }
+
+      .supervisor-label {
+        text-decoration: underline;
+      }
+      .supervisor {
+        color: var(--color);
+      }
+    }
+  }
+}
