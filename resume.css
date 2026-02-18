@@ -86,10 +86,10 @@ hr {
   }
   
   .contact {
-    width: 220px;
+    width: 400px;
     color: var(--color);
     
-    .email, .phone {
+    .email, .phone, .website {
       font-size: 20px;
       font-weight: 400;
       text-align: right;
