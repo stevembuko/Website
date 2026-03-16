@@ -23,6 +23,94 @@
         </div>
 
         <div class="container">
+            <div class="header"><h1>About Me</h1></div>
+            <div class="section">
+                <p>
+                    Ever since I started programming back in 6th grade, I knew that that was what I wanted to do with my life.
+                    I love programming, and I'd like to think I'm quite good at it, but I'd also never be happy with <i>just</i> programming.
+                    As a kid I'd bounce between programming and art and writing and all sorts of different art forms.
+                    And that's how I decided to get into game development.
+                    What other medium exists at the intersection of all of those different art forms?
+                </p>
+                <details>
+                    <p><summary><u>Read More</u></summary></p>
+                    <p>
+                        Throughout all of my experience making games, in game jams, in college at DigiPen, and on my own time,
+                        I continued learning more about myself and where I best fit in the process of making games.
+                        When it comes to art, sure I can make some decent looking assets in pixel art or 3D,
+                        but I'll never fill more than a supplemental role next to an artist who has dedicated years of their life to honing their craft.
+                        I can do a bit of writing, but I'll never hold a candle to a dedicated author.
+                        When it comes to design, a specialist in any specific discipline will still be better than me,
+                        but I can get remarkably close when it comes to systems and UX design. But I'm still a programmer at my core.
+                    </p>
+                    <p>
+                        My true passion lies at the intersection between programming and design.
+                        For me, the design of a system and its implementation are inextricably linked.
+                        Throughout every step of the process, I'm always thinking of how the code of the system can be expanded in the future,
+                        how the player will interact with the system, how non-technical designers can configure and tweak the system,
+                        and how the performance of the system will scale and impact the game.
+                    </p>
+                </details>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="header">
+                <h1>Showcases and Articles</h1>
+            </div>
+            <div class="section showcase-section">
+                <div class="showcase-video">
+                    <h3>Optimzing Cascading Triggered Events to Run in a Chess-like AI</h3>
+                    <video title="Optimzing Dynamic Triggered Events to Run 10,000x Faster than Real-Time", width="560" height="352" controls>
+                        <source src="showcase_chessnomancy-ai.webm" type="video/webm">
+                        Video not suppported by browser
+                    </video>
+                </div>
+            </div>
+            <div class="section showcase-section">
+                <div class="showcase-video">
+                    <h3>Improving the Unity Inspector for a Custom Highlighting Tool</h3>
+                    <p>
+                        During the development of Chessnomancy, one of the things that we experimented with was
+                        a fairly complicated system of highlighting tiles in different ways to give the player information.
+                        In the end we found that it added too much visual complexity and we decided to massively simplify it,
+                        but I think that some of the tech and tools I made for it behind the scenes are still interesting.
+                    </p>
+                    <details>
+                        <p><summary><u>Read More</u></summary></p>
+                        <img src="tile_highlighting_screenshot.png" alt="[An in-game screenshot of highlighted tiles and their descriptions]" width="100%">
+                        <p>
+                            In order to manage all of the different rules that dictate how each tile will end up being highlighted,
+                            I created a data-driven system which allows designers to not only control the color, icon,
+                            and description of each rule, but also specify the order that rules get applied in,
+                            whether a rule can override another rule on both a per-tile and entire-board basis,
+                            and provides a way to remove duplicate or overly similar descriptions of rules from the description UI.
+                        </p>
+                        <p>
+                            The core of this system consists of two arrays: first is a list of 'Highlight Infos'
+                            which allowed me and the other designers to easily configure the basic parameters that gets shown to the player.
+                            The second list of 'Highlight Controls' is the part that controls which rules get applied,
+                            what order thy get applied in, and which rules override other rules.
+                        </p>
+                        <p>
+                            An issue that was initially present with this approach is that, by default,
+                            the Unity editor will label array elements as 'Element 0', 'Element 1', etc.
+                            In practice, this meant that the process of tweaking these rules was far more tedious than it needed to be,
+                            since there was no easy way to tell which element was the one you wanted to tweak without opening every single one.
+                        </p>
+                        <img src="tile_highlighting_editor.png" alt="[A screenshot of the Unity inspector used to configure highlighted tiles and their descriptions]" width="60%">
+                        <p>
+                            This was a fairly small project and not worth the effort of creating a full editor tool for,
+                            but I find a solution in the sparsely-documented way that Unity will sometimes label array elements.
+                            If the first serialized field in a struct is a string, Unity will use that string as the element label.
+                            I was able to exploit this by adding a hidden string to the start of these structs, resolving this usability issue.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
             <div class="header">
                 <h1>Major Projects</h1>
             </div>
@@ -64,75 +152,6 @@
                 <!--<a href="minecraft.html">Read More</a>-->
             </div>
         </div>
-
-        <div class="container">
-            <div class="header">
-                <h1>Showcases and Articles</h1>
-            </div>
-            <div class="section showcase-section">
-                <div class="showcase-video">
-                    <h3>Optimzing Cascading Triggered Events to Run in a Chess-like AI</h3>
-                    <video title="Optimzing Dynamic Triggered Events to Run 10,000x Faster than Real-Time", width="560" height="352" controls>
-                        <source src="showcase_chessnomancy-ai.webm" type="video/webm">
-                        Video not suppported by browser
-                    </video>
-                </div>
-            </div>
-            <div class="section showcase-section">
-                <div class="showcase-video">
-                    <h3>Improving the Unity Inspector for a Custom Highlighting Tool</h3>
-                    <p>
-                        During the development of Chessnomancy, one of the things that we experimented with was
-                        a fairly complicated system of highlighting tiles in different ways to give the player information.
-                        In the end we found that it added too much visual complexity and we decided to massively simplify it,
-                        but I think that some of the tech and tools I made for it behind the scenes are still interesting.
-                    </p>
-                    <details>
-                        <summary><u>Read More</u></summary>
-                        <br>
-                        <img src="tile_highlighting_screenshot.png" alt="[An in-game screenshot of highlighted tiles and their descriptions]" width="100%">
-                        <p>
-                            In order to manage all of the different rules that dictate how each tile will end up being highlighted,
-                            I created a data-driven system which allows designers to not only control the color, icon,
-                            and description of each rule, but also specify the order that rules get applied in,
-                            whether a rule can override another rule on both a per-tile and entire-board basis,
-                            and provides a way to remove duplicate or overly similar descriptions of rules from the description UI.
-                        </p>
-                        <p>
-                            The core of this system consists of two arrays: first is a list of 'Highlight Infos'
-                            which allowed me and the other designers to easily configure the basic parameters that gets shown to the player.
-                            The second list of 'Highlight Controls' is the part that controls which rules get applied,
-                            what order thy get applied in, and which rules override other rules.
-                        </p>
-                        <p>
-                            An issue that was initially present with this approach is that, by default,
-                            the Unity editor will label array elements as 'Element 0', 'Element 1', etc.
-                            In practice, this meant that the process of tweaking these rules was far more tedious than it needed to be,
-                            since there was no easy way to tell which element was the one you wanted to tweak without opening every single one.
-                        </p>
-                        <img src="tile_highlighting_editor.png" alt="[A screenshot of the Unity inspector used to configure highlighted tiles and their descriptions]" width="60%">
-                        <p>
-                            This was a fairly small project and not worth the effort of creating a full editor tool for,
-                            but I find a solution in the sparsely-documented way that Unity will sometimes label array elements.
-                            If the first serialized field in a struct is a string, Unity will use that string as the element label.
-                            I was able to exploit this by adding a hidden string to the start of these structs, resolving this usability issue.
-                        </p>
-                    </details>
-                </div>
-            </div>
-        </div>
-        <!--
-        <div class="container">
-            <div class="header">
-                <h1>About Me</h1>
-            </div>
-            <div class="section">
-                <p>
-                    [This website is under active development. More details coming soon.] 
-                </p>
-            </div>
-        </div>
-        -->
     </div>
 </body>
 </html>
